@@ -1,0 +1,7 @@
+{
+    "words":["if","else","for","while"],
+    "operators":["+","-","*","/","=","==","&&","||","!"],
+    "block_delimitators":["{","}"],
+    "array_delimitators":["[","]"],
+    "line_breaker":";"
+}
