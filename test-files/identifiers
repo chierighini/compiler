@@ -1,3 +1,8 @@
 foo = 1 ;
 bar = 2 ;
-bar2 = 3 ;
+bar2 = 3 {
+    deez = 59
+    if red == 20 {
+        this = 90 ;
+    }
+}
