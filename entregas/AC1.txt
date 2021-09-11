@@ -1,16 +1,3 @@
-# compiler
-
-A "compiler" written in python for educational purposes
-
-## Language rules
-
-1. Lines should end with a `;`
-2. Blocks should be delimited by `{}`
-3. Reserved words: `if, else, for, while`
-4. Operators: `+,-,*,/,=,++,&&,||,!` 
-
-Esse documento deve servir como guia para produzir a especificação do projeto de compilador, o qual poderá (deverá) ser atualizado no andamento do semestre. Para a primeira entrega, os elementos esperados são:
-
 1. Informações gerais (nome da linguagem criada/adaptada, nome da linguagem usada para o compilador, nome da linguagem destino)
 
 - A linguagem criada é uma linguagem baseada em C (ponto e vírgula para terminar linhas, colchetes para delimitar blocos, etc)
@@ -39,4 +26,3 @@ Esse documento deve servir como guia para produzir a especificação do projeto 
 5. Representação léxica atual do problema na linguagem de origem
 
 ```['VARIABLE', 'OPERATOR', 'VALUE', 'LINE_END', 'VARIABLE', 'OPERATOR', 'VALUE', 'LINE_END', 'VARIABLE', 'OPERATOR', 'VALUE', 'DELIM', 'VARIABLE', 'OPERATOR', 'VALUE', 'RES_WORD', 'VARIABLE', 'OPERATOR', 'VALUE', 'DELIM', 'VARIABLE', 'OPERATOR', 'VALUE', 'LINE_END', 'DELIM', 'DELIM']```
-
