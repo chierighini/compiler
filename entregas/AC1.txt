@@ -1,3 +1,9 @@
+André Chierighini - RA 171340
+Gabriel Bueno Penha Rodrigues - RA 171813
+Gustavo Motta Tranche - RA 171071
+Lucas Souza Maximiano - RA 171114
+Tiago Machado Maldonado - RA 171047
+
 1. Informações gerais (nome da linguagem criada/adaptada, nome da linguagem usada para o compilador, nome da linguagem destino)
 
 - A linguagem criada é uma linguagem baseada em C (ponto e vírgula para terminar linhas, colchetes para delimitar blocos, etc)
@@ -25,4 +31,4 @@
 
 5. Representação léxica atual do problema na linguagem de origem
 
-```['VARIABLE', 'OPERATOR', 'VALUE', 'LINE_END', 'VARIABLE', 'OPERATOR', 'VALUE', 'LINE_END', 'VARIABLE', 'OPERATOR', 'VALUE', 'DELIM', 'VARIABLE', 'OPERATOR', 'VALUE', 'RES_WORD', 'VARIABLE', 'OPERATOR', 'VALUE', 'DELIM', 'VARIABLE', 'OPERATOR', 'VALUE', 'LINE_END', 'DELIM', 'DELIM']```
+['VARIABLE', 'OPERATOR', 'VALUE', 'LINE_END', 'VARIABLE', 'OPERATOR', 'VALUE', 'LINE_END', 'VARIABLE', 'OPERATOR', 'VALUE', 'DELIM', 'VARIABLE', 'OPERATOR', 'VALUE', 'RES_WORD', 'VARIABLE', 'OPERATOR', 'VALUE', 'DELIM', 'VARIABLE', 'OPERATOR', 'VALUE', 'LINE_END', 'DELIM', 'DELIM']
