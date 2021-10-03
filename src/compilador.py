@@ -12,7 +12,7 @@ def main():
     op_queue = []
     content = splitter(raw_content)
     identifier(content, op_queue,reserved)
-    print(content)
+    #print(content)
     print(op_queue)
 
 def splitter(ob):
@@ -48,6 +48,8 @@ def identifier(ob, q, reserved):
                 q.append('DECLAR')
             elif(el in reserved["separators"]):
                 q.append('SEPRT')
+            elif(el in reserved["comment"]):
+                break
             else:
                 try:
                     int(el)

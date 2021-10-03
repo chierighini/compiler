@@ -1,8 +1,9 @@
 {
     "declarators":["int"],
     "separators":[","],
-    "words":["if","else","for","while"],
-    "operators":["+","-","*","/","=","==","&&","||","!"],
+    "words":["if","else","for","while","return"],
+    "operators":["+","-","*","/","=","==","&&","||","!",">","<","!="],
     "delimitators":["{","}","[","]","(",")"],
-    "line_breaker":[";"]
+    "line_breaker":[";"],
+    "comment":["//"]
 }
