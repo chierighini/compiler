@@ -1,0 +1,38 @@
+R -> A | A2 | B | C 
+
+A -> <DECLAR> V
+V -> <VARIABLE> OP2 | <VARIABLE> J OP 
+A2 -> <VARIABLE> <OPERATOR> Z | <VARIABLE> J <OPERATOR> O2
+B -> <RES_WORD> <DELIM> L <DELIM> <DELIM> R <DELIM>
+L -> <VALUE> | <VARIABLE> | <VARIABLE> K | <VALUE> K  
+K -> P | EPSILON
+P -> <OPERATOR> L
+
+OP -> <LINE_END> | <OPERATOR> Z 
+OP2 -> <LINE_END> | <OPERATOR> OP3 <LINE_END> | OP
+OP3 -> <VARIABLE> | <DELIM> X <DELIM>
+X -> F <SEPARATOR> X | <DELIM> X <DELIM>
+J -> <DELIM> F <DELIM> J OP2
+F -> <VARIABLE> | <VALUE> 
+F2 ->  <VARIABLE> J
+Z -> F OP
+
+
+
+====================================================================================
+
+R -> <KW> A | <ID> <OP> H | <TAB> E
+A -> <(> B <)> J | <ID> EPSILON 
+B -> <ID> G | <NUM> G | <NUM> | <ID>
+D -> <OP> B 
+
+C -> <FUNC> <FUNCINIT> C' <FUNCEND> Z | <FUNC> <FUNCINIT> C' K <FUNCEND> Z
+C' -> <FUNC> <FUNCINIT> C'' <FUNCEND> | <FUNC> <FUNCINIT> C'' K <FUNCEND>
+C'' -> B | C' | C' D
+K -> <SEP> C'' | <SEP> C'' K
+
+E -> <TAB> E | B | <KW> B J | <KW> EPSILON | <KW> <ID> <KW> C
+G -> D | EPSILON
+H -> <NUM> EPSILON | <ID> EPSILON
+J -> <DLMTR> EPSILON
+Z -> <DLMTR> EPSILON | EPSILON

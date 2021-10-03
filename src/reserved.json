@@ -1,7 +1,7 @@
 {
     "declarators":["int"],
     "separators":[","],
-    "words":["if","else","for","while","return"],
+    "words":["if","else","while","return"],
     "operators":["+","-","*","/","=","==","&&","||","!",">","<","!="],
     "delimitators":["{","}","[","]","(",")"],
     "line_breaker":[";"],
