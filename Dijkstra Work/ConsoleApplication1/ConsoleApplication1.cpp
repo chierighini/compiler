@@ -8,8 +8,6 @@
 #define INFINITY 9999
 #define MAX 10
 
-void dijkstra (int G [ MAX ] [ MAX ] , int n , int startnode);
-
 int main()
 {
 	int   G [ MAX ] [ MAX ] , i , j , n , u ;
@@ -23,20 +21,14 @@ int main()
 	}
 	printf( "\nEnter the starting node:" ) ;
 	scanf( "%d" , & u ) ;
-	dijkstra( G , n , u ) ;
-	return 0;
-}
-
-void dijkstra( int G [ MAX ] [ MAX ] , int n , int startnode )
-{
-
-	int cost [ MAX ] [ MAX ] , distance [ MAX ] , pred [ MAX ] ;
-	int visited [ MAX ] , count , mindistance , nextnode , i , j ;
+	
+	int cost[MAX][MAX], distance[MAX], pred[MAX];
+	int visited[MAX], count, mindistance, nextnode;
 	//pred[] stores the predecessor of each node
 	//count gives the number of nodes seen so far
 	//create the cost matrix
-	for (i = 0 ; i < n ; i = i + 1) {
-		for (j = 0 ; j < n ; j = j + 1) {
+	for (i = 0; i < n; i = i + 1) {
+		for (j = 0; j < n; j = j + 1) {
 			if (G[i][j] == 0) {
 				cost[i][j] = INFINITY;
 			}
@@ -46,16 +38,16 @@ void dijkstra( int G [ MAX ] [ MAX ] , int n , int startnode )
 		}
 	}
 	//initialize pred[],distance[] and visited[]
-	for ( i = 0 ; i < n ; i = i + 1 )
+	for (i = 0; i < n; i = i + 1)
 	{
-		distance [ i ] = cost [ startnode ] [ i ] ;
-		pred [ i ] = startnode ;
-		visited [ i ] = 0 ;
+		distance[i] = cost[u][i];
+		pred[i] = u;
+		visited[i] = 0;
 	}
-	distance [ startnode ] = 0 ;
-	visited [ startnode ] = 1 ;
-	count = 1 ;
-	while ( count < n - 1 )
+	distance[u] = 0;
+	visited[u] = 1;
+	count = 1;
+	while (count < n - 1)
 	{
 		mindistance = INFINITY;
 		//nextnode gives the node at minimum distance
@@ -67,8 +59,8 @@ void dijkstra( int G [ MAX ] [ MAX ] , int n , int startnode )
 			}
 		}
 		//check if a better path exists through nextnode
-		visited[ nextnode ] = 1 ;
-		for (i = 0 ; i < n ; i = i + 1) {
+		visited[nextnode] = 1;
+		for (i = 0; i < n; i = i + 1) {
 			if (!visited[i]) {
 				if (mindistance + cost[nextnode][i] < distance[i])
 				{
@@ -77,23 +69,24 @@ void dijkstra( int G [ MAX ] [ MAX ] , int n , int startnode )
 				}
 			}
 		}
-		count = count + 1 ;
+		count = count + 1;
 	}
 
 	//print the path and distance of each node
-	for (i = 0 ; i < n ; i = i + 1) {
-		if (i != startnode)
+	for (i = 0; i < n; i = i + 1) {
+		if (i != u)
 		{
 			printf("\nDistance of node%d=%d", i, distance[i]);
 			printf("\nPath=%d", i);
 			j = i;
-			while (j != startnode)
+			while (j != u)
 			{
 				j = pred[j];
 				printf("<-%d", j);
 			}
 		}
 	}
+	return 0 ;
 }
 // Executar programa: Ctrl + F5 ou Menu Depurar > Iniciar Sem Depuração
 // Depurar programa: F5 ou menu Depurar > Iniciar Depuração
