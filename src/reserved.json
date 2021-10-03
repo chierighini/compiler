@@ -1,6 +1,8 @@
 {
+    "declarators":["int"],
+    "separators":[","],
     "words":["if","else","for","while"],
     "operators":["+","-","*","/","=","==","&&","||","!"],
-    "delimitators":["{","}","[","]"],
+    "delimitators":["{","}","[","]","(",")"],
     "line_breaker":[";"]
 }

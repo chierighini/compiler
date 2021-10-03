@@ -44,6 +44,10 @@ def identifier(ob, q, reserved):
                 q.append('OPERATOR')
             elif(el in reserved["delimitators"]):
                 q.append('DELIM')
+            elif(el in reserved["declarators"]):
+                q.append('DECLAR')
+            elif(el in reserved["separators"]):
+                q.append('SEPRT')
             else:
                 try:
                     int(el)
